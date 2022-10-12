@@ -1,0 +1,45 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /netty/
+spring:
+  # \u6570\u636E\u5E93\u8FDE\u63A5\u6C60
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mysql://47.241.77.23:3306/bwg08?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+      username: david
+      password: david@liretech
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    platform: mariadb
+  # Redis \u76F8\u5173\u4FE1\u606F\u914D\u7F6E
+  redis:
+    host: 47.241.77.23
+    port: 6379
+    password:
+    database: 10
+    timeout: 60000
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+# \u9A7C\u5CF0\u5230\u4E0B\u5212\u7EBF\u81EA\u52A8\u5207\u6362
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+#logback\u6839\u76EE\u5F55
+loghome: /tmp/logs/sports/sports_netty

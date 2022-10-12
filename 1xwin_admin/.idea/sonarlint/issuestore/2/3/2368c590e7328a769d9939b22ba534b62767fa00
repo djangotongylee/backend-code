@@ -1,0 +1,13 @@
+
+]
+java:S1854í"ARemove this useless assignment to local variable "headLocalDate".(š·ª´øÿÿÿÿ
+N
+java:S1481í"2Remove this unused "headLocalDate" local variable.(š·ª´øÿÿÿÿ
+|
+java:S2142¦"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ôÁ“ø/
+n	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å«Ú’8¾Ê©î.
+n	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯£Œø8¾Ê©î.
+D
+java:S1700b""Rename field "userInfoServiceImpl"(¿Ñü”ùÿÿÿÿ8¾Ê©î.
+M
+java:S2589{"7Remove this expression which always evaluates to "true"(Í’Î¾

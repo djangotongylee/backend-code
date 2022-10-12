@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apiend" />
+        <module name="task" />
+        <module name="dao" />
+        <module name="utils" />
+        <module name="service" />
+        <module name="backend" />
+        <module name="payment" />
+        <module name="plat" />
+        <module name="tools" />
+        <module name="netty" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin" target="11" />
+      <module name="apiend" target="11" />
+      <module name="backend" target="11" />
+      <module name="dao" target="11" />
+      <module name="netty" target="11" />
+      <module name="payment" target="11" />
+      <module name="plat" target="11" />
+      <module name="service" target="11" />
+      <module name="sports" target="11" />
+      <module name="task" target="11" />
+      <module name="tools" target="11" />
+      <module name="utils" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="apiend" options="-parameters" />
+      <module name="backend" options="-parameters" />
+      <module name="dao" options="-parameters" />
+      <module name="netty" options="-parameters" />
+      <module name="payment" options="-parameters" />
+      <module name="plat" options="-parameters" />
+      <module name="service" options="-parameters" />
+      <module name="task" options="-parameters" />
+      <module name="tools" options="-parameters" />
+      <module name="utils" options="-parameters" />
+    </option>
+  </component>
+</project>

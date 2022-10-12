@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsEbetMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsEbet">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="game_type" property="gameType" />
+        <result column="game_name" property="gameName" />
+        <result column="bet" property="bet" />
+        <result column="round_no" property="roundNo" />
+        <result column="payout" property="payout" />
+        <result column="payout_withoutholding" property="payoutWithoutholding" />
+        <result column="create_time" property="createTime" />
+        <result column="payout_time" property="payoutTime" />
+        <result column="bet_history_id" property="betHistoryId" />
+        <result column="valid_bet" property="validBet" />
+        <result column="balance" property="balance" />
+        <result column="username" property="username" />
+        <result column="user_id" property="userId" />
+        <result column="platform" property="platform" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="player_result" property="playerResult" />
+        <result column="banker_result" property="bankerResult" />
+        <result column="dragon_card" property="dragonCard" />
+        <result column="tiger_card" property="tigerCard" />
+        <result column="number" property="number" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, game_type, game_name, bet, round_no, payout, payout_withoutholding, create_time, payout_time, bet_history_id, valid_bet, balance, username, user_id, platform, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at, player_result, banker_result, dragon_card, tiger_card, number
+    </sql>
+
+</mapper>

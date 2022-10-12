@@ -1,0 +1,11 @@
+
+d
+java:S1192é"HDefine a constant instead of duplicating this literal "message" 3 times.(ÄÓŠÔùÿÿÿÿ
+b
+java:S1192ñ"KUse already-defined constant 'MODEL' instead of duplicating its value here.(Ò½×¡
+^
+java:S2259Š"BA "NullPointerException" could be thrown; "plat" is nullable here.(ˆ”§ëùÿÿÿÿ
+Y
+java:S2259·"BA "NullPointerException" could be thrown; "plat" is nullable here.(‡¸¯ð
+n
+java:S3776°"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¸Þ¡ñüÿÿÿÿ

@@ -1,0 +1,90 @@
+
+U
+java:S3516·"9Refactor this method to not always return the same value.(Ë©Ü¦úÿÿÿÿ
+E
+java:S3740~"/Provide the parametrized type for this generic.(ÿÎ™Ä
+E
+java:S3740~"/Provide the parametrized type for this generic.(ÿÎ™Ä
+F
+java:S3740ß"/Provide the parametrized type for this generic.(ÿÎ™Ä
+F
+java:S3740ß"/Provide the parametrized type for this generic.(ÿÎ™Ä
+E
+java:S3740»"/Provide the parametrized type for this generic.(ÔÇ¡N
+F
+java:S3740É"/Provide the parametrized type for this generic.(ÿÎ™Ä
+F
+java:S3740É"/Provide the parametrized type for this generic.(ÿÎ™Ä
+k
+java:S1192‚"NDefine a constant instead of duplicating this literal "PaymentReqDto" 3 times.(«Òô8ÜÑÒ/
+]
+java:S1192é"FDefine a constant instead of duplicating this literal "=====" 4 times.(ª î
+b
+java:S1192÷"KUse already-defined constant 'MODEL' instead of duplicating its value here.(††ö¥
+w
+java:S1192"bDefine a constant instead of duplicating this literal "application/x-www-form-urlencoded" 3 times.(ÊË¦v
+b
+java:S1192p"LDefine a constant instead of duplicating this literal "pay_md5sign" 3 times.(úö›Ş
+i
+java:S1192Æ"MDefine a constant instead of duplicating this literal "out_trade_no" 3 times.(åÈê›ıÿÿÿÿ
+_
+java:S1192„"HDefine a constant instead of duplicating this literal "success" 3 times.(Õ‰»‘
+^
+java:S1192„"GDefine a constant instead of duplicating this literal "status" 7 times.(Õ‰»‘
+b
+java:S1192"MDefine a constant instead of duplicating this literal "Content-Type" 3 times.(ÊË¦v
+g
+java:S1192Š"IDefine a constant instead of duplicating this literal "category" 3 times.(“—á³8éÑÒ/
+X
+java:S1141È"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ÿÑÒ/
+Y
+java:S2259ğ"BA "NullPointerException" could be thrown; "plat" is nullable here.(Ÿœäë
+Y
+java:S2259¹"BA "NullPointerException" could be thrown; "plat" is nullable here.(óÑ”¤
+Y
+java:S2259§"BA "NullPointerException" could be thrown; "plat" is nullable here.(Ÿœäë
+v
+java:S1149 "_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+Q
+java:S6212T"/Declare this local variable with "var" instead.(Åİ‹®ùÿÿÿÿ8ãÒÒ/
+L
+java:S6212Z"/Declare this local variable with "var" instead.(ƒÓ¯î8éÒÒ/
+Q
+java:S6212r"/Declare this local variable with "var" instead.(ÔÅ‹™ûÿÿÿÿ8°¦ààš/
+Q
+java:S6212|"/Declare this local variable with "var" instead.(ÏÀŞúÿÿÿÿ8ùÒÒ/
+L
+java:S6212~"/Declare this local variable with "var" instead.(ÿÎ™Ä8¿¦ààš/
+b
+java:S3252‚"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(«Òô8ÓÒ/
+M
+java:S6212ƒ"/Declare this local variable with "var" instead.(Æ¢ïÌ8Â¦ààš/
+R
+java:S6212ˆ"/Declare this local variable with "var" instead.(çââ”üÿÿÿÿ8Ä¦ààš/
+M
+java:S6212Š"/Declare this local variable with "var" instead.(“—á³8‹ÓÒ/
+M
+java:S6212 "/Declare this local variable with "var" instead.(í…Ò‰8Ì¦ààš/
+M
+java:S6212¡"/Declare this local variable with "var" instead.(á‚¹8Í¦ààš/
+L
+java:S6212´"/Declare this local variable with "var" instead.(€Œp8¢ÓÒ/
+R
+java:S6212¿"/Declare this local variable with "var" instead.(’í£™üÿÿÿÿ8Õ¦ààš/
+M
+java:S6212ß"/Declare this local variable with "var" instead.(ÿÎ™Ä8÷¦ààš/
+h
+java:S3252ä"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(ïş™Ñùÿÿÿÿ8¾ÓÒ/
+M
+java:S6212ç"/Declare this local variable with "var" instead.(Æ¢ïÌ8ı¦ààš/
+M
+java:S6212±"/Declare this local variable with "var" instead.(Šçµ¯8øÓÒ/
+L
+java:S6212ù"/Declare this local variable with "var" instead.(€Œp8—ÔÒ/
+M
+java:S6212É"/Declare this local variable with "var" instead.(ÿÎ™Ä8ğ§ààš/
+h
+java:S3252Í"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(ÌğˆÙûÿÿÿÿ8ÆÔÒ/
+M
+java:S6212Î"/Declare this local variable with "var" instead.(Æ¢ïÌ8ô§ààš/
+D	java:S108Ï")Either remove or fill this block of code.(û’÷úÿÿÿÿ

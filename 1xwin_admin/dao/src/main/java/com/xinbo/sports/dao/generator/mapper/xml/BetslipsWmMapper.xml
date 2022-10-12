@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsWmMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsWm">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="user" property="user" />
+        <result column="bet_time" property="betTime" />
+        <result column="before_cash" property="beforeCash" />
+        <result column="bet" property="bet" />
+        <result column="valid_bet" property="validBet" />
+        <result column="water" property="water" />
+        <result column="result" property="result" />
+        <result column="bet_code" property="betCode" />
+        <result column="bet_result" property="betResult" />
+        <result column="water_bet" property="waterBet" />
+        <result column="win_loss" property="winLoss" />
+        <result column="ip" property="ip" />
+        <result column="gid" property="gid" />
+        <result column="event" property="event" />
+        <result column="event_child" property="eventChild" />
+        <result column="round" property="round" />
+        <result column="sub_round" property="subRound" />
+        <result column="table_id" property="tableId" />
+        <result column="game_result" property="gameResult" />
+        <result column="gname" property="gname" />
+        <result column="commission" property="commission" />
+        <result column="reset" property="reset" />
+        <result column="set_time" property="setTime" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, user, bet_time, before_cash, bet, valid_bet, water, result, bet_code, bet_result, water_bet, win_loss, ip, gid, event, event_child, round, sub_round, table_id, game_result, gname, commission, reset, set_time, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

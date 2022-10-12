@@ -1,0 +1,20 @@
+
+L
+java:S3740#"/Provide the parametrized type for this generic.(éÀëü8°ÄŽ“ø/
+K
+java:S37400"/Provide the parametrized type for this generic.(ýî¥C8°ÄŽ“ø/
+Q
+java:S37409"/Provide the parametrized type for this generic.(ÆŸªçûÿÿÿÿ8°ÄŽ“ø/
+L
+java:S3740F"/Provide the parametrized type for this generic.(ÎÊÆ£8±ÄŽ“ø/
+c	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÀëü
+@
+java:S2153$"#Remove the unboxing from "Integer".(¶ü¸²8»ÄŽ“ø/
+<
+java:S2153$"Remove the boxing to "Integer".(¶ü¸²8¼ÄŽ“ø/
+f
+java:S2153$"IRemove the boxing to "Integer"; The argument is already of the same type.(¶ü¸²8¼ÄŽ“ø/
+b	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýî¥C
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(øºÑûúÿÿÿÿ
+7
+java:S16435"Use a StringBuilder instead.(¥ˆÝ•ýÿÿÿÿ

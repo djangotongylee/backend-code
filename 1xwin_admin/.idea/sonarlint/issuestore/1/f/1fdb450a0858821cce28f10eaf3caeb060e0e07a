@@ -1,0 +1,17 @@
+
+u
+java:S1149C"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ðÃäõ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þ£ñ±þÿÿÿÿ
+S
+java:S1854""8Remove this useless assignment to local variable "hash".(šìì½þÿÿÿÿ
+T
+java:S4719""9Replace charset name argument with StandardCharsets.UTF_8(šìì½þÿÿÿÿ
+D
+java:S1481"")Remove this unused "hash" local variable.(šìì½þÿÿÿÿ
+;
+java:S2129;" Remove this "String" constructor(¦’ûºýÿÿÿÿ
+E
+java:S1197?"*Move the array designators [] to the type.(Ýö×÷ÿÿÿÿÿ
+k	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦’ûºýÿÿÿÿ
+
+java:S4165$"dRemove this useless assignment; "encode" already holds the assigned value along all execution paths.(í§œùüÿÿÿÿ

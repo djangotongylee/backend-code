@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.PayOnlineMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.PayOnline">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="pay_name" property="payName" />
+        <result column="pay_model" property="payModel" />
+        <result column="coin_min" property="coinMin" />
+        <result column="coin_max" property="coinMax" />
+        <result column="coin_range" property="coinRange" />
+        <result column="category" property="category" />
+        <result column="level_bit" property="levelBit" />
+        <result column="sort" property="sort" />
+        <result column="mark" property="mark" />
+        <result column="status" property="status" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, pay_name, pay_model, coin_min, coin_max, coin_range, category, level_bit, sort, mark, status, created_at, updated_at
+    </sql>
+
+</mapper>

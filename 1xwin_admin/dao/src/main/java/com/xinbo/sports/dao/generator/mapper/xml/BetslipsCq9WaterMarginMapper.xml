@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsCq9WaterMarginMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsCq9WaterMargin">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="account" property="account" />
+        <result column="balance" property="balance" />
+        <result column="game_hall" property="gameHall" />
+        <result column="game_type" property="gameType" />
+        <result column="game_plat" property="gamePlat" />
+        <result column="game_code" property="gameCode" />
+        <result column="bet" property="bet" />
+        <result column="valid_bet" property="validBet" />
+        <result column="jackpot" property="jackpot" />
+        <result column="jackpot_contribution" property="jackpotContribution" />
+        <result column="jackpot_type" property="jackpotType" />
+        <result column="status" property="status" />
+        <result column="end_round_time" property="endRoundTime" />
+        <result column="create_time" property="createTime" />
+        <result column="bet_time" property="betTime" />
+        <result column="detail" property="detail" />
+        <result column="single_row_bet" property="singleRowBet" />
+        <result column="game_role" property="gameRole" />
+        <result column="banke_type" property="bankeType" />
+        <result column="rake" property="rake" />
+        <result column="roomfee" property="roomfee" />
+        <result column="bet_type" property="betType" />
+        <result column="game_result" property="gameResult" />
+        <result column="table_type" property="tableType" />
+        <result column="table_id" property="tableId" />
+        <result column="round_number" property="roundNumber" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, account, balance, game_hall, game_type, game_plat, game_code, bet, valid_bet, jackpot, jackpot_contribution, jackpot_type, status, end_round_time, create_time, bet_time, detail, single_row_bet, game_role, banke_type, rake, roomfee, bet_type, game_result, table_type, table_id, round_number, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

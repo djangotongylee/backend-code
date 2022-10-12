@@ -1,0 +1,4 @@
+
+t	java:S116“"WRename this field "api_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇáÓ8Â¡‡•ˆ/
+y	java:S116”"WRename this field "web_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìôÄØüÿÿÿÿ8Â¡‡•ˆ/
+c	java:S101€"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(åÉŠÅ

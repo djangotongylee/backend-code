@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.CoinDepositMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.CoinDeposit">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="title" property="title" />
+        <result column="uid" property="uid" />
+        <result column="username" property="username" />
+        <result column="pay_type" property="payType" />
+        <result column="category" property="category" />
+        <result column="pay_refer" property="payRefer" />
+        <result column="coin" property="coin" />
+        <result column="pay_coin" property="payCoin" />
+        <result column="coin_before" property="coinBefore" />
+        <result column="dep_realname" property="depRealname" />
+        <result column="audit_status" property="auditStatus" />
+        <result column="audit_uid" property="auditUid" />
+        <result column="audit_mark" property="auditMark" />
+        <result column="audited_at" property="auditedAt" />
+        <result column="status" property="status" />
+        <result column="dep_status" property="depStatus" />
+        <result column="dep_mark" property="depMark" />
+        <result column="admin_id" property="adminId" />
+        <result column="deposited_at" property="depositedAt" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, title, uid, username, pay_type, category, pay_refer, coin, pay_coin, coin_before, dep_realname, audit_status, audit_uid, audit_mark, audited_at, status, dep_status, dep_mark, admin_id, deposited_at, created_at, updated_at
+    </sql>
+
+</mapper>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectSettingsService">
+    <option name="defaultNamespace" value="" />
+    <option name="filePattern" value="*.properties" />
+    <option name="localesDirectory" value="$PROJECT_DIR$/apiend/src/main/resources/i18n" />
+    <option name="parserStrategy" value="PROPERTIES" />
+  </component>
+</project>

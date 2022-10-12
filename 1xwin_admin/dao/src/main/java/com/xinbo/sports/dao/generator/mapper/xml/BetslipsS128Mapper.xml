@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsS128Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsS128">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="login_id" property="loginId" />
+        <result column="arena_code" property="arenaCode" />
+        <result column="arena_name_cn" property="arenaNameCn" />
+        <result column="match_no" property="matchNo" />
+        <result column="match_type" property="matchType" />
+        <result column="match_date" property="matchDate" />
+        <result column="fight_no" property="fightNo" />
+        <result column="fight_datetime" property="fightDatetime" />
+        <result column="meron_cock" property="meronCock" />
+        <result column="meron_cock_cn" property="meronCockCn" />
+        <result column="wala_cock" property="walaCock" />
+        <result column="wala_cock_cn" property="walaCockCn" />
+        <result column="bet_on" property="betOn" />
+        <result column="odds_type" property="oddsType" />
+        <result column="odds_asked" property="oddsAsked" />
+        <result column="odds_given" property="oddsGiven" />
+        <result column="stake" property="stake" />
+        <result column="stake_money" property="stakeMoney" />
+        <result column="balance_open" property="balanceOpen" />
+        <result column="balance_close" property="balanceClose" />
+        <result column="created_datetime" property="createdDatetime" />
+        <result column="fight_result" property="fightResult" />
+        <result column="status" property="status" />
+        <result column="winloss" property="winloss" />
+        <result column="comm_earned" property="commEarned" />
+        <result column="payout" property="payout" />
+        <result column="balance_open1" property="balanceOpen1" />
+        <result column="balance_close1" property="balanceClose1" />
+        <result column="processed_datetime" property="processedDatetime" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, login_id, arena_code, arena_name_cn, match_no, match_type, match_date, fight_no, fight_datetime, meron_cock, meron_cock_cn, wala_cock, wala_cock_cn, bet_on, odds_type, odds_asked, odds_given, stake, stake_money, balance_open, balance_close, created_datetime, fight_result, status, winloss, comm_earned, payout, balance_open1, balance_close1, processed_datetime, xb_coin, xb_profit, xb_valid_coin, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

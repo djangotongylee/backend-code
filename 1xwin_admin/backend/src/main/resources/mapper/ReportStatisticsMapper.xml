@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.backend.mapper.ReportStatisticsMapper">
+    <!-- 报表中心-各平台盈利排行版 -->
+    <select id="platLeaderBoardProfitStatisticsList" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        SELECT xb_uid as uid,xb_username as username,ifnull(sum(xb_profit) ,0) as profit FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        GROUP BY uid
+        ORDER BY profit DESC
+        LIMIT 20
+    </select>
+
+    <!-- 报表中心-各平台盈亏报表->列表 -->
+    <select id="getPlatformProfitList" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        SELECT xb_uid as uid,xb_username as username,ifnull(sum(xb_profit) ,0) as profit FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="gameId != null and gameId != ''">
+                and ${columnName1} = #{gameId}
+            </if>
+            <if test="uidList != null and  uidList.size > 0">
+                and xb_uid in
+                <foreach collection="uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        GROUP BY uid
+        ORDER BY profit DESC
+        <if test="size != null">
+            LIMIT #{size}
+        </if>
+    </select>
+
+    <!-- 报表中心-各平台盈亏报表->列表SQL分页 -->
+    <select id="getPlatformProfitPage" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        SELECT xb_uid as uid,xb_username as username,ifnull(sum(xb_profit) ,0) as profit FROM ${po.tableName}
+        <where>
+            <if test="po.startTime != null">
+                and updated_at &gt;= #{po.startTime}
+            </if>
+            <if test="po.endTime != null">
+                and updated_at &lt;= #{po.endTime}
+            </if>
+            <if test="po.gameId != null and po.gameId != ''">
+                and ${po.columnName1} = #{po.gameId}
+            </if>
+            <if test="po.uidList != null and  po.uidList.size > 0">
+                and xb_uid in
+                <foreach collection="po.uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="po.testUidList != null and  po.testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="po.testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        GROUP BY uid
+    </select>
+
+    <!-- 报表中心-综合走势图-各平台投注总额或游戏盈亏 -->
+    <select id="getPlatCoinStatistics" resultType="BigDecimal">
+        SELECT ifnull(sum(${columnName}) ,0) as coin FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="uidList != null and uidList.size > 0">
+                and xb_uid in
+                <foreach collection="uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+    <!-- 综合走势图-游戏盈亏与投注注数:游戏盈亏 -->
+    <select id="getPlatProfitStatistics" resultType="com.xinbo.sports.backend.io.po.PlatProfitAndBetCountChartPo">
+        SELECT ifnull(sum(xb_profit) ,0) as coin, FROM_UNIXTIME(updated_at,'%Y-%m-%d') as name FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        group by
+        FROM_UNIXTIME(updated_at,'%Y-%m-%d')
+    </select>
+    <!-- 综合走势图-游戏盈亏与投注注数:投注注数 -->
+    <select id="getPlatBetCountStatistics" resultType="com.xinbo.sports.backend.io.po.PlatProfitAndBetCountChartPo">
+        SELECT count(id) as count,FROM_UNIXTIME(updated_at,'%Y-%m-%d') as name FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        group by
+        FROM_UNIXTIME(updated_at,'%Y-%m-%d')
+    </select>
+    <!-- 综合走势图-游戏盈亏与投注注数:投注人数 -->
+    <select id="getPlatBetUserCountStatistics" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        SELECT xb_uid as uid,FROM_UNIXTIME(updated_at,'%Y-%m-%d') as dateName FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        group by dateName,uid order by dateName
+    </select>
+
+
+    <!-- 每日报表new->按平台统计:投注总额|输赢总额 -->
+    <select id="getDailyReportStatisticsPlatCoin" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        SELECT ifnull(sum(xb_coin) ,0) as coin,ifnull(sum(xb_profit) ,0) as profit FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="uidList != null and uidList.size > 0">
+                and xb_uid in
+                <foreach collection="uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="username != null">
+                and xb_username = #{username}
+            </if>
+            <if test="gameId != null and gameId != ''">
+                and ${columnName1} = #{gameId}
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+    <!-- 每日报表new->投注笔数-->
+    <select id="getBetCount" resultType="long">
+        SELECT count(id) as count FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="uidList != null and uidList.size > 0">
+                and xb_uid in
+                <foreach collection="uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+    <!-- 每日报表new->投注人数-->
+    <select id="getBetUserCount" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        SELECT xb_uid as uid FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="uidList != null and uidList.size > 0">
+                and xb_uid in
+                <foreach collection="uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        group by uid
+    </select>
+
+    <!-- 交易记录-投注总额-列表 -->
+    <select id="getPlatBetTotalList" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        select id as id,xb_uid as uid,xb_username as username,${columnName1} as gameId,${columnName2} as actionNo,
+        xb_coin as coin,xb_profit as profit,xb_status as status,created_at as createdAt,updated_at as updatedAt
+        FROM ${tableName}
+        <where>
+            <if test="startTime != null">
+                and updated_at &gt;= #{startTime}
+            </if>
+            <if test="endTime != null">
+                and updated_at &lt;= #{endTime}
+            </if>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="username != null">
+                and xb_username = #{username}
+            </if>
+            <if test="testUidList != null and  testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="uidList != null and  uidList.size > 0">
+                and xb_uid in
+                <foreach collection="uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        order by updated_at desc
+        <if test="size != null">
+            limit #{size}
+        </if>
+    </select>
+
+    <!-- 交易记录-投注总额-SQL分页 -->
+    <select id="getPlatBetTotalListPage" resultType="com.xinbo.sports.backend.io.po.ReportStatisticsPo">
+        select id as id,xb_uid as uid,xb_username as username,${po.columnName1} as gameId,${po.columnName2} as actionNo,
+        xb_coin as coin,xb_profit as profit,xb_status as status,created_at as createdAt,updated_at as updatedAt
+        FROM ${po.tableName}
+        <where>
+            <if test="po.startTime != null">
+                and updated_at &gt;= #{po.startTime}
+            </if>
+            <if test="po.endTime != null">
+                and updated_at &lt;= #{po.endTime}
+            </if>
+            <if test="po.id != null">
+                and id = #{po.id}
+            </if>
+            <if test="po.username != null">
+                and xb_username = #{po.username}
+            </if>
+            <if test="po.gameId != null and po.gameId != ''">
+                and ${po.columnName1} = #{po.gameId}
+            </if>
+            <if test="po.testUidList != null and  po.testUidList.size > 0">
+                and xb_uid not in
+                <foreach collection="po.testUidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="po.uidList != null and  po.uidList.size > 0">
+                and xb_uid in
+                <foreach collection="po.uidList" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+</mapper>

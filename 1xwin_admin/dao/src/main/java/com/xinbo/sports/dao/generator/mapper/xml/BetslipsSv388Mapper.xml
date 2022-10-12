@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsSv388Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsSv388">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="ref_no" property="refNo" />
+        <result column="site" property="site" />
+        <result column="product" property="product" />
+        <result column="member" property="member" />
+        <result column="game_id" property="gameId" />
+        <result column="start_time" property="startTime" />
+        <result column="match_time" property="matchTime" />
+        <result column="end_time" property="endTime" />
+        <result column="bet_detail" property="betDetail" />
+        <result column="turnover" property="turnover" />
+        <result column="bet" property="bet" />
+        <result column="payout" property="payout" />
+        <result column="commission" property="commission" />
+        <result column="p_share" property="pShare" />
+        <result column="p_win" property="pWin" />
+        <result column="status" property="status" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, ref_no, site, product, member, game_id, start_time, match_time, end_time, bet_detail, turnover, bet, payout, commission, p_share, p_win, status, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

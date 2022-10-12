@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.apiend.mapper.UserInfoMapper">
+
+    <!-- 开启二级缓存 -->
+    <!--<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
+
+    <!-- 通用查询结果列 -->
+    <select id="getUserInfoById" resultType="com.xinbo.sports.apiend.io.dto.mapper.UserInfoResDto">
+        select a.id, username, avatar, coin, fcoin, level_id as levelId, role,
+        realname, signature, birthday, area_code as areaCode, mobile, email, sex, auto_transfer as autoTransfer,
+        bind_bank as bindBank, score, promo_code as promoCode, password_hash as passwordHash, password_coin as
+        passwordCoin, b.created_at as createdAt, address, status,b.upgrade_balance as upgradeBalance
+        from sp_user a inner join sp_user_profile b on a.id=b.uid where a.id = #{id}
+    </select>
+
+    <select id="getUserInfoByUsername" resultType="com.xinbo.sports.apiend.io.dto.mapper.UserInfoResDto">
+        select a.id, username, avatar, coin, fcoin, level_id as levelId, role,
+        realname, signature, birthday, area_code as areaCode, mobile, email, sex, auto_transfer as autoTransfer,
+        bind_bank as bindBank, score, promo_code as promoCode, password_hash as passwordHash, password_coin as
+        passwordCoin, b.created_at as createdAt, address, status
+        from sp_user a inner join sp_user_profile b on a.id=b.uid where a.username = #{username}
+    </select>
+</mapper>

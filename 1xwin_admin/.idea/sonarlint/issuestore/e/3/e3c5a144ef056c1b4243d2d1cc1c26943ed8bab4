@@ -1,0 +1,67 @@
+
+c
+java:S1192"GDefine a constant instead of duplicating this literal "=====" 11 times.(é‘ùÿÿÿÿ
+e
+java:S1192Û"NUse already-defined constant 'ORDER_ID' instead of duplicating its value here.(ª±•á
+f
+java:S1192j"KDefine a constant instead of duplicating this literal "merchantId" 3 times.(úÁ„÷øÿÿÿÿ
+l
+java:S1192s"QDefine a constant instead of duplicating this literal "application/json" 3 times.(–¬ğ«ıÿÿÿÿ
+a
+java:S1192t"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(öÖØäøÿÿÿÿ
+b
+java:S1192x"GDefine a constant instead of duplicating this literal "status" 9 times.(ú¶×ıÿÿÿÿ
+c
+java:S1192t"HDefine a constant instead of duplicating this literal "charset" 3 times.(öÖØäøÿÿÿÿ
+h
+java:S1192s"MDefine a constant instead of duplicating this literal "Content-Type" 3 times.(–¬ğ«ıÿÿÿÿ
+e
+java:S1192k"JDefine a constant instead of duplicating this literal "timestamp" 3 times.(šûæüÿÿÿÿ
+d
+java:S1192u"IDefine a constant instead of duplicating this literal "Api-Sign" 6 times.(ß¸êâıÿÿÿÿ
+_
+java:S1192¿"HDefine a constant instead of duplicating this literal "message" 3 times.(ç¡öÕ
+3
+java:S1643™"Use a StringBuilder instead.(©³–à
+3
+java:S1643Î"Use a StringBuilder instead.(©³–à
+^
+java:S2259Ó"BA "NullPointerException" could be thrown; "plat" is nullable here.(´üÍûÿÿÿÿ
+^
+java:S2259œ"BA "NullPointerException" could be thrown; "plat" is nullable here.(´üÍûÿÿÿÿ
+j
+java:S11281"TRemove this unused import 'com.xinbo.sports.payment.io.PayParams.OPEN_ACCOUNT_BANK'.(ô³Î…
+I
+java:S1128,".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+J
+java:S6212Q"/Declare this local variable with "var" instead.(Åİ‹®ùÿÿÿÿ
+E
+java:S6212V"/Declare this local variable with "var" instead.(ƒÓ¯î
+J
+java:S6212^"/Declare this local variable with "var" instead.(’í£™üÿÿÿÿ
+K
+java:S6212"/Declare this local variable with "var" instead.(ŒÖÚ€ùÿÿÿÿ
+K
+java:S6212•"/Declare this local variable with "var" instead.(’í£™üÿÿÿÿ
+F
+java:S6212–"/Declare this local variable with "var" instead.(ìğöë
+K
+java:S6212Õ"/Declare this local variable with "var" instead.(¢ÀÆ§üÿÿÿÿ
+F
+java:S6212ê"/Declare this local variable with "var" instead.(õİ‘
+K
+java:S6212–"/Declare this local variable with "var" instead.(ûÍÇÉøÿÿÿÿ
+K
+java:S6212—"/Declare this local variable with "var" instead.(ÂŒĞÜøÿÿÿÿ
+K
+java:S6212"/Declare this local variable with "var" instead.(»­ö¨ûÿÿÿÿ
+K
+java:S6212¤"/Declare this local variable with "var" instead.(¨×…´øÿÿÿÿ
+K
+java:S6212Ë"/Declare this local variable with "var" instead.(ûÍÇÉøÿÿÿÿ
+K
+java:S6212Ì"/Declare this local variable with "var" instead.(ÂŒĞÜøÿÿÿÿ
+K
+java:S6212Ô"/Declare this local variable with "var" instead.(»­ö¨ûÿÿÿÿ
+K
+java:S6212Û"/Declare this local variable with "var" instead.(³Ğÿ¡ÿÿÿÿÿ

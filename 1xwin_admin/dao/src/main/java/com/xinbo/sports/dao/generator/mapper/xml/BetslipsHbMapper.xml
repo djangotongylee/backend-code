@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsHbMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsHb">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="player_id" property="playerId" />
+        <result column="brand_id" property="brandId" />
+        <result column="username" property="username" />
+        <result column="brand_game_id" property="brandGameId" />
+        <result column="game_key_name" property="gameKeyName" />
+        <result column="game_type_id" property="gameTypeId" />
+        <result column="dt_started" property="dtStarted" />
+        <result column="dt_completed" property="dtCompleted" />
+        <result column="friendly_game_instance_id" property="friendlyGameInstanceId" />
+        <result column="game_instance_id" property="gameInstanceId" />
+        <result column="stake" property="stake" />
+        <result column="payout" property="payout" />
+        <result column="jackpot_win" property="jackpotWin" />
+        <result column="balance_after" property="balanceAfter" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, player_id, brand_id, username, brand_game_id, game_key_name, game_type_id, dt_started, dt_completed, friendly_game_instance_id, game_instance_id, stake, payout, jackpot_win, balance_after, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

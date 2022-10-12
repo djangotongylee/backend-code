@@ -1,0 +1,21 @@
+
+i
+java:S3776Ô"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(†ª»
+i
+java:S3776Ô"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(†ª»
+n
+java:S3776Ö"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÇÖ‹ûÿÿÿÿ
+n
+java:S3776Ö"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÇÖ‹ûÿÿÿÿ
+n
+java:S3776¨"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(Ÿ›Øüüÿÿÿÿ
+n
+java:S3776¨"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(Ÿ›Øüüÿÿÿÿ
+[
+java:S3358¿"DExtract this nested ternary operation into an independent statement.(¥ìä˜
+[
+java:S3358¿"DExtract this nested ternary operation into an independent statement.(¥ìä˜
+‘
+java:S2159¿"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(¥ìä˜
+‘
+java:S2159¿"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(¥ìä˜

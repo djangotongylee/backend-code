@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.RevenueStatisticsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.RevenueStatistics">
+        <id column="id" property="id" />
+        <result column="game_id" property="gameId" />
+        <result column="game_name" property="gameName" />
+        <result column="year" property="year" />
+        <result column="month" property="month" />
+        <result column="day" property="day" />
+        <result column="bet_coin" property="betCoin" />
+        <result column="valid_coin" property="validCoin" />
+        <result column="profit_coin" property="profitCoin" />
+        <result column="rate" property="rate" />
+        <result column="revenue_coin" property="revenueCoin" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, game_id, game_name, year, month, day, bet_coin, valid_coin, profit_coin, rate, revenue_coin, created_at, updated_at
+    </sql>
+
+</mapper>

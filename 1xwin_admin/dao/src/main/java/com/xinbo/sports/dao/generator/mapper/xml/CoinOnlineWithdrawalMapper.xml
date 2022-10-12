@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.CoinOnlineWithdrawalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.CoinOnlineWithdrawal">
+        <id column="id" property="id" />
+        <result column="uid" property="uid" />
+        <result column="username" property="username" />
+        <result column="order_id" property="orderId" />
+        <result column="withdrawal_order_id" property="withdrawalOrderId" />
+        <result column="payout_code" property="payoutCode" />
+        <result column="coin" property="coin" />
+        <result column="bank_info" property="bankInfo" />
+        <result column="mark" property="mark" />
+        <result column="status" property="status" />
+        <result column="category" property="category" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uid, username, order_id, withdrawal_order_id, payout_code, coin, bank_info, mark, status, category, created_at, updated_at
+    </sql>
+
+</mapper>

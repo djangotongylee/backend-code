@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsAgMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsAg">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="play_name" property="playName" />
+        <result column="game_code" property="gameCode" />
+        <result column="net_amount" property="netAmount" />
+        <result column="bet_time" property="betTime" />
+        <result column="game_type" property="gameType" />
+        <result column="bet_amount" property="betAmount" />
+        <result column="valid_bet_amount" property="validBetAmount" />
+        <result column="flag" property="flag" />
+        <result column="play_type" property="playType" />
+        <result column="currency" property="currency" />
+        <result column="table_code" property="tableCode" />
+        <result column="recalcu_time" property="recalcuTime" />
+        <result column="before_credit" property="beforeCredit" />
+        <result column="bet_ip" property="betIp" />
+        <result column="platform_type" property="platformType" />
+        <result column="remark" property="remark" />
+        <result column="round" property="round" />
+        <result column="result" property="result" />
+        <result column="rounders" property="rounders" />
+        <result column="device_type" property="deviceType" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, play_name, game_code, net_amount, bet_time, game_type, bet_amount, valid_bet_amount, flag, play_type, currency, table_code, recalcu_time, before_credit, bet_ip, platform_type, remark, round, result, rounders, device_type, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

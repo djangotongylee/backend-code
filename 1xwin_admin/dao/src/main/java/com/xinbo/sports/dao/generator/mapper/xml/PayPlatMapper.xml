@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.PayPlatMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.PayPlat">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="business_code" property="businessCode" />
+        <result column="business_pwd" property="businessPwd" />
+        <result column="public_key" property="publicKey" />
+        <result column="private_key" property="privateKey" />
+        <result column="url" property="url" />
+        <result column="withdraw_url" property="withdrawUrl" />
+        <result column="notifyUrl" property="notifyUrl" />
+        <result column="returnUrl" property="returnUrl" />
+        <result column="pay_model" property="payModel" />
+        <result column="status" property="status" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, business_code, business_pwd, public_key, private_key, url, withdraw_url, notifyUrl, returnUrl, pay_model, status, created_at, updated_at
+    </sql>
+
+</mapper>

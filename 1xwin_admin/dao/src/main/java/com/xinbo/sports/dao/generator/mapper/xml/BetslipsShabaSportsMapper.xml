@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsShabaSportsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsShabaSports">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="vendor_member_id" property="vendorMemberId" />
+        <result column="operator_id" property="operatorId" />
+        <result column="league_id" property="leagueId" />
+        <result column="match_id" property="matchId" />
+        <result column="home_id" property="homeId" />
+        <result column="away_id" property="awayId" />
+        <result column="team_id" property="teamId" />
+        <result column="match_datetime" property="matchDatetime" />
+        <result column="sport_type" property="sportType" />
+        <result column="bet_type" property="betType" />
+        <result column="parlay_ref_no" property="parlayRefNo" />
+        <result column="odds" property="odds" />
+        <result column="stake" property="stake" />
+        <result column="transaction_time" property="transactionTime" />
+        <result column="ticket_status" property="ticketStatus" />
+        <result column="winlost_amount" property="winlostAmount" />
+        <result column="after_amount" property="afterAmount" />
+        <result column="currency" property="currency" />
+        <result column="winlost_datetime" property="winlostDatetime" />
+        <result column="odds_type" property="oddsType" />
+        <result column="odds_Info" property="oddsInfo" />
+        <result column="bet_team" property="betTeam" />
+        <result column="exculding" property="exculding" />
+        <result column="bet_tag" property="betTag" />
+        <result column="home_hdp" property="homeHdp" />
+        <result column="away_hdp" property="awayHdp" />
+        <result column="hdp" property="hdp" />
+        <result column="betfrom" property="betfrom" />
+        <result column="islive" property="islive" />
+        <result column="home_score" property="homeScore" />
+        <result column="away_score" property="awayScore" />
+        <result column="settlement_time" property="settlementTime" />
+        <result column="home_team_name" property="homeTeamName" />
+        <result column="league_name" property="leagueName" />
+        <result column="away_team_name" property="awayTeamName" />
+        <result column="customInfo1" property="customInfo1" />
+        <result column="customInfo2" property="customInfo2" />
+        <result column="customInfo3" property="customInfo3" />
+        <result column="customInfo4" property="customInfo4" />
+        <result column="customInfo5" property="customInfo5" />
+        <result column="ba_status" property="baStatus" />
+        <result column="version_key" property="versionKey" />
+        <result column="parlay_data" property="parlayData" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, vendor_member_id, operator_id, league_id, match_id, home_id, away_id, team_id, match_datetime, sport_type, bet_type, parlay_ref_no, odds, stake, transaction_time, ticket_status, winlost_amount, after_amount, currency, winlost_datetime, odds_type, odds_Info, bet_team, exculding, bet_tag, home_hdp, away_hdp, hdp, betfrom, islive, home_score, away_score, settlement_time, home_team_name, league_name, away_team_name, customInfo1, customInfo2, customInfo3, customInfo4, customInfo5, ba_status, version_key, parlay_data, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

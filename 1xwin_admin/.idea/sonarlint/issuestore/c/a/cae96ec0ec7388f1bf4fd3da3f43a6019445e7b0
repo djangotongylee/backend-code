@@ -1,0 +1,8 @@
+
+I
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+E
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ
+s	java:S116d"YRename this field "transaction_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê‡¨ýüÿÿÿÿ
+q	java:S116t"WRename this field "out_trade_no" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò’·îøÿÿÿÿ
+p	java:S116w"VRename this field "pay_md5sign" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÍ¾Èýÿÿÿÿ

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsDgMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsDg">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="username" property="username" />
+        <result column="lobby_id" property="lobbyId" />
+        <result column="table_id" property="tableId" />
+        <result column="shoe_id" property="shoeId" />
+        <result column="play_id" property="playId" />
+        <result column="game_type" property="gameType" />
+        <result column="game_id" property="gameId" />
+        <result column="member_id" property="memberId" />
+        <result column="bet_time" property="betTime" />
+        <result column="cal_time" property="calTime" />
+        <result column="win_or_Loss" property="winOrLoss" />
+        <result column="win_or_lossz" property="winOrLossz" />
+        <result column="bet_points" property="betPoints" />
+        <result column="bet_pointsz" property="betPointsz" />
+        <result column="available_bet" property="availableBet" />
+        <result column="result" property="result" />
+        <result column="bet_detail" property="betDetail" />
+        <result column="bet_detailz" property="betDetailz" />
+        <result column="ip" property="ip" />
+        <result column="ext" property="ext" />
+        <result column="is_revocation" property="isRevocation" />
+        <result column="balance_before" property="balanceBefore" />
+        <result column="parent_bet_id" property="parentBetId" />
+        <result column="currency_id" property="currencyId" />
+        <result column="device_type" property="deviceType" />
+        <result column="plugin_id" property="pluginId" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, username, lobby_id, table_id, shoe_id, play_id, game_type, game_id, member_id, bet_time, cal_time, win_or_Loss, win_or_lossz, bet_points, bet_pointsz, available_bet, result, bet_detail, bet_detailz, ip, ext, is_revocation, balance_before, parent_bet_id, currency_id, device_type, plugin_id, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

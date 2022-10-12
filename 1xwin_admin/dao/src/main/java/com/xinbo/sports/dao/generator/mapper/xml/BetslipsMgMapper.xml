@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsMgMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsMg">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="created_dateUTC" property="createdDateutc" />
+        <result column="game_start_timeUTC" property="gameStartTimeutc" />
+        <result column="game_end_timeUTC" property="gameEndTimeutc" />
+        <result column="player_id" property="playerId" />
+        <result column="product_id" property="productId" />
+        <result column="product_player_id" property="productPlayerId" />
+        <result column="platform" property="platform" />
+        <result column="game_code" property="gameCode" />
+        <result column="currency" property="currency" />
+        <result column="bet_amount" property="betAmount" />
+        <result column="payout_amount" property="payoutAmount" />
+        <result column="bet_status" property="betStatus" />
+        <result column="pca" property="pca" />
+        <result column="external_transaction_id" property="externalTransactionId" />
+        <result column="metadata" property="metadata" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, created_dateUTC, game_start_timeUTC, game_end_timeUTC, player_id, product_id, product_player_id, platform, game_code, currency, bet_amount, payout_amount, bet_status, pca, external_transaction_id, metadata, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>

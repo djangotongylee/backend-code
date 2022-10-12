@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.backend.mapper.UserManagerMapper">
+    <!-- 开启二级缓存
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>-->
+    <!-- 会员管理-会员列表 -->
+    <select id="list" resultType="com.xinbo.sports.backend.io.bo.user.ListResBody">
+        select a.id as uid,a.username,a.level_id as levelId,a.role,a.coin,b.status,a.flag,a.created_at as createdAt,
+        (select ifnull(max(created_at),0) from sp_user_login_log where uid = a.id) as loginTime,b.mobile
+        from sp_user a left join sp_user_profile b
+        on a.id = b.uid
+        <where>
+            <if test="po != null">
+                <if test="po.uid != null">
+                    and a.id = #{po.uid}
+                </if>
+                <if test="po.username != null and po.username !=''">
+                    and a.username = #{po.username}
+                </if>
+                <if test="po.role != null">
+                    and a.role = #{po.role}
+                </if>
+                <if test="po.levelId != null">
+                    and a.level_id = #{po.levelId}
+                </if>
+                <if test="po.status != null">
+                    and b.status = #{po.status}
+                </if>
+                <if test="po.mobile != null and po.mobile !=''">
+                    and b.mobile = #{po.mobile}
+                </if>
+                <if test="po.startTime != null">
+                    and a.created_at &gt;= #{po.startTime}
+                </if>
+                <if test="po.endTime != null">
+                    and a.created_at &lt;= #{po.endTime}
+                </if>
+
+                <if test="po.uidList != null">
+                    and a.id in
+                    <foreach collection="po.uidList" item="item" index="index" open="(" close=")" separator=",">
+                        #{item}
+                    </foreach>
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <!-- 会员管理-会员详情 -->
+    <select id="getDetail" resultType="com.xinbo.sports.backend.io.bo.user.DetailResBody">
+        select a.id as uid,a.username,b.realname,a.level_id as levelId,a.role,a.coin,b.mobile,a.created_at as
+        createdAt,b.status,a.flag,b.sex,b.area_code as areaCode,
+        birthday,b.extra_code as extraCode,b.extra_code_rule as extraCodeRule
+        from sp_user a left join sp_user_profile b on a.id = b.uid
+        where a.id = #{uid}
+    </select>
+
+    <!-- 会员管理-添加会员 -->
+    <select id="getUserInfo" resultType="com.xinbo.sports.backend.io.bo.user.AddUserResBody">
+        select t1.id,t1.username,t1.username,t1.avatar,t2.area_code as areaCode,t2.mobile,t1.coin,
+        t1.fcoin,t1.level_id as levelId,t2.score,
+        t2.promo_code as promoCode
+        from sp_user t1 inner join sp_user_profile t2 on t1.id= t2.uid where id=#{uid}
+    </select>
+
+    <!-- 会员列表-团队在线 and exists (select uid from `sp_user_login_log` where status=0 and uid = t.uid)-->
+    <select id="listOnline" resultType="com.xinbo.sports.backend.io.bo.user.ListResBody">
+        select uid from sp_user_profile t
+        where (sup_uid_1 = #{po.uid} or sup_uid_2 = #{po.uid} or sup_uid_3 = #{po.uid} or sup_uid_4 = #{po.uid} or
+        sup_uid_5 = #{po.uid} or sup_uid_6 = #{po.uid})
+        and exists (select uid from `sp_user_login_log` where status=0 and uid = t.uid)
+    </select>
+    <!-- 会员旗管理-列表查询 -->
+    <select id="listFlag" resultType="com.xinbo.sports.backend.io.bo.user.ListFlagResBody">
+        select id, name,bit_code as bitCode,icon,icon_color as iconColor,status,(select count(id)
+        from sp_user where flag <![CDATA[&]]> t1.bit_code) as userCount from sp_user_flag t1
+    </select>
+    <!-- 会员旗管理-弹框-已被使用的会员旗列表 -->
+    <select id="listFlagUsed" resultType="com.xinbo.sports.backend.io.bo.user.ListFlagUsedPO">
+        select t1.id as uid,t1.username,GROUP_CONCAT(t2.bit_code) as bitCode, GROUP_CONCAT(t2.icon) as icon,
+        GROUP_CONCAT(t2.icon_color) as iconColor,GROUP_CONCAT(t2.name) as name
+        from sp_user t1 right join sp_user_flag t2 on t1.flag  <![CDATA[&]]> t2.bit_code where t1.flag <![CDATA[&]]>
+        #{po.bitCode}
+        <if test="null != po">
+            <if test="null != po.uid">
+                and t1.id like '${po.uid}%'
+            </if>
+            <if test="po.username != null and po.username != ''">
+                and t1.username like '${po.username}%'
+            </if>
+        </if>
+        group by t1.id
+    </select>
+    <!-- 会员旗管理-获取用户会员旗-->
+    <select id="listUserFlag" resultType="integer">
+        select bit_code as bitCode from sp_user_flag where bit_code <![CDATA[&]]> #{bitCode}
+    </select>
+
+    <!--在线人数->列表查询(分页)-->
+    <select id="onlineUserCountList" resultType="com.xinbo.sports.backend.io.bo.user.OnlineUserCountListResBody">
+        select a.id as uid,a.username,a.level_id as levelId,a.coin,a.flag,
+        b.sup_uid_1 as supUid1,
+        c.created_at as loginTime,c.ip,c.device
+        from sp_user a
+        left join sp_user_profile b on a.id = b.uid
+        left join (select uid,ip,device,created_at from (select id,uid,ip,device,created_at from sp_user_login_log
+        order by id desc limit 1000000000) t
+        group by uid ) c on a.id = c.uid
+
+        <where>
+            <if test="po != null">
+                <if test="po.supUid1 != null">
+                    and b.sup_uid_1 = #{po.supUid1}
+                </if>
+                <if test="po.startTime != null">
+                    and c.created_at &gt;= #{po.startTime}
+                </if>
+                <if test="po.endTime != null">
+                    and c.created_at &lt;= #{po.endTime}
+                </if>
+                <if test="po.device != null">
+                    and c.device = #{po.device}
+                </if>
+                <if test="po.ip != null">
+                    and c.ip like '${po.ip}%'
+                </if>
+                <if test="po.uidList != null">
+                    and a.id in
+                    <foreach collection="po.uidList" item="item" index="index" open="(" close=")" separator=",">
+                        #{item}
+                    </foreach>
+                </if>
+            </if>
+        </where>
+    </select>
+</mapper>

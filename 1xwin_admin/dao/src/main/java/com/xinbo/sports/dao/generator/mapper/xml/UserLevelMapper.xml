@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.UserLevelMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.UserLevel">
+        <id column="id" property="id" />
+        <result column="bit_code" property="bitCode" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="score_upgrade" property="scoreUpgrade" />
+        <result column="score_relegation" property="scoreRelegation" />
+        <result column="rewards_upgrade" property="rewardsUpgrade" />
+        <result column="rewards_monthly" property="rewardsMonthly" />
+        <result column="rewards_birthday" property="rewardsBirthday" />
+        <result column="withdrawal_nums" property="withdrawalNums" />
+        <result column="withdrawal_total_coin" property="withdrawalTotalCoin" />
+        <result column="max_rebate_coin" property="maxRebateCoin" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, bit_code, code, name, score_upgrade, score_relegation, rewards_upgrade, rewards_monthly, rewards_birthday, withdrawal_nums, withdrawal_total_coin, max_rebate_coin, created_at, updated_at
+    </sql>
+
+</mapper>

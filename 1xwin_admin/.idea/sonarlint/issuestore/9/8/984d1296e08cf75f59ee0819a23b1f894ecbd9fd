@@ -1,0 +1,14 @@
+
+R	java:S125Œ"<This block of commented-out lines of code should be removed.(Ü”íê
+@
+java:S1481‹")Remove this unused "list" local variable.(û‹Ö‰
+S
+java:S1854Š"7Remove this useless assignment to local variable "now".(¥ËúÑşÿÿÿÿ
+O
+java:S1854‹"8Remove this useless assignment to local variable "list".(û‹Ö‰
+[
+java:S2259¿"DA "NullPointerException" could be thrown; "result" is nullable here.(’¶âº
+D
+java:S3740x"/Provide the parametrized type for this generic.(åÜâ<
+D
+java:S1481Š"(Remove this unused "now" local variable.(¥ËúÑşÿÿÿÿ

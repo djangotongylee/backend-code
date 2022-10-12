@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.UserProfileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.UserProfile">
+        <id column="uid" property="uid" />
+        <result column="realname" property="realname" />
+        <result column="signature" property="signature" />
+        <result column="birthday" property="birthday" />
+        <result column="area_code" property="areaCode" />
+        <result column="mobile" property="mobile" />
+        <result column="email" property="email" />
+        <result column="sex" property="sex" />
+        <result column="auto_transfer" property="autoTransfer" />
+        <result column="bind_bank" property="bindBank" />
+        <result column="address" property="address" />
+        <result column="score" property="score" />
+        <result column="promo_code" property="promoCode" />
+        <result column="sup_uid_1" property="supUid1" />
+        <result column="sup_uid_2" property="supUid2" />
+        <result column="sup_uid_3" property="supUid3" />
+        <result column="sup_uid_4" property="supUid4" />
+        <result column="sup_uid_5" property="supUid5" />
+        <result column="sup_uid_6" property="supUid6" />
+        <result column="password_hash" property="passwordHash" />
+        <result column="password_coin" property="passwordCoin" />
+        <result column="status" property="status" />
+        <result column="extra_code" property="extraCode" />
+        <result column="extra_code_rule" property="extraCodeRule" />
+        <result column="upgrade_balance" property="upgradeBalance" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uid, realname, signature, birthday, area_code, mobile, email, sex, auto_transfer, bind_bank, address, score, promo_code, sup_uid_1, sup_uid_2, sup_uid_3, sup_uid_4, sup_uid_5, sup_uid_6, password_hash, password_coin, status, extra_code, extra_code_rule, upgrade_balance, created_at, updated_at
+    </sql>
+
+</mapper>

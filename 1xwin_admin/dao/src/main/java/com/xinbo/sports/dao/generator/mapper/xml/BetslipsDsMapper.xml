@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinbo.sports.dao.generator.mapper.BetslipsDsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xinbo.sports.dao.generator.po.BetslipsDs">
+        <id column="id" property="id" />
+        <result column="xb_uid" property="xbUid" />
+        <result column="xb_username" property="xbUsername" />
+        <result column="bet_at" property="betAt" />
+        <result column="finish_at" property="finishAt" />
+        <result column="agent" property="agent" />
+        <result column="member" property="member" />
+        <result column="game_id" property="gameId" />
+        <result column="game_serial" property="gameSerial" />
+        <result column="game_type" property="gameType" />
+        <result column="round_id" property="roundId" />
+        <result column="bet_amount" property="betAmount" />
+        <result column="payout_amount" property="payoutAmount" />
+        <result column="valid_amount" property="validAmount" />
+        <result column="status" property="status" />
+        <result column="fee_amount" property="feeAmount" />
+        <result column="jp_amount" property="jpAmount" />
+        <result column="xb_coin" property="xbCoin" />
+        <result column="xb_valid_coin" property="xbValidCoin" />
+        <result column="xb_profit" property="xbProfit" />
+        <result column="xb_status" property="xbStatus" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, xb_uid, xb_username, bet_at, finish_at, agent, member, game_id, game_serial, game_type, round_id, bet_amount, payout_amount, valid_amount, status, fee_amount, jp_amount, xb_coin, xb_valid_coin, xb_profit, xb_status, created_at, updated_at
+    </sql>
+
+</mapper>
